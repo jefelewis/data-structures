@@ -1,6 +1,7 @@
 // Stack: Last In First Out
 
 var Stack = function() {
+  
   var someInstance = {};
 
   // Use an object with numeric keys to store values (Storage is the Stack)
