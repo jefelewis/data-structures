@@ -1,8 +1,9 @@
 // Linked List Function (Contains the Node objects)
 var LinkedList = function() {
-  var list = {};
-  list.head = 0;
-  list.tail = 0;
+  var list = {
+    head: 0,
+    tail: 0
+  };
 
   list.addToTail = function(value) {
     // Assign value to the Node using the Node function
@@ -19,14 +20,14 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-    for(var i = 0; i < list.length; i++){
-      if(list[i] === target){
-        return true;
-      }
-      else{
-        return false;
-      }
-    }
+    // for(var i = 0; i < list.length; i++){
+    //   if(list[i] === target){
+    //     return true;
+    //   }
+    //   else{
+    //     return false;
+    //   }
+    // }
   };
 
   return list;
@@ -34,10 +35,10 @@ var LinkedList = function() {
 
 // Node Function
 var Node = function(value) {
-  var node = {};
-
-  node.value = value;
-  node.next = null;
+  var node = {
+    value: value,
+    next: null
+  };
 
   return node;
 };
