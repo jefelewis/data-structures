@@ -2,7 +2,7 @@ var Stack = function() {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
 
-  // Create object
+  // Create object using Prototypal Inheritance
   var obj = Object.create(stackMethods);
   obj.lastElement = 0;
   obj.storage = {};
