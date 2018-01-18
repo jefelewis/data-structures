@@ -1,3 +1,4 @@
+// Linked List Function (Contains the Node objects)
 var LinkedList = function() {
   var list = {};
   list.head = 0;
@@ -31,6 +32,7 @@ var LinkedList = function() {
   return list;
 };
 
+// Node Function
 var Node = function(value) {
   var node = {};
 
