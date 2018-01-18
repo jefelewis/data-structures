@@ -11,11 +11,11 @@ var Queue = function() {
     storage: {}
   };
 
-  // _.Extend gives an object with all the properties (stackMethods) of the passed in
+  // _.Extend gives an object with all the properties (queueMethods) of the passed in
   // Extend(obj, methods to call onto the object)
-  _.extend(obj, stackMethods);
+  _.extend(obj, queueMethods);
 
-  // Return output Object with stackMethods that were just applied with _.extend
+  // Return output Object with queueMethods that were just applied with _.extend
   return obj;
 
 };
