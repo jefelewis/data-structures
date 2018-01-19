@@ -2,20 +2,17 @@
 var LinkedList = function() {
   var list = {
     head: null,
-    tail: null,
-    total: 0
+    tail: null
   };
 
 
   list.addToTail = function(value) {
-    // Check if Linked List has no nodes (Node becomes Head and Tail)
+    // Check if Linked List has no Nodes (Node becomes Head and Tail)
     if(list.head === null){
       // Assign value to the Head
       list.head = Node(value);
       // Assign Head to the Tail (We CANNOT assign list.tail to Node(value) because it creates TWO objects. They are the same output, but DIFFERENT objects)
       list.tail = list.head;
-      // Add 1 to the total count
-      list.total += 1;
     }
 
     // If the Linked List has node
@@ -24,18 +21,16 @@ var LinkedList = function() {
       list.tail.next = Node(value);
       // Assign Node to the Tail
       list.tail = list.tail.next;
-      // Add 1 to the total
-      list.total += 1;
     }
   };
 
   list.removeHead = function() {
-    // // Check if Linked List has no nodes
-    // if(list.head === null){
-    //   // Return an empty object Node?
-    //   return {};
-    // }
-    // Check if the Linked List has nodes
+    // // Check if Linked List has no Nodes
+    if(list.head === null){
+      // Return an empty object Node
+      return {};
+    }
+    // Check if the Linked List has Nodes
     if(list.head !== null){
       // Assign Head to value (Why Do I need value?)
       var deletedHead = list.head.value;
@@ -47,11 +42,38 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
+    var currentNode = list.head;
+    var wasFound = false;
 
+    // BASE CASES
+    // If Target Value is found
+    if(list.head.value === target){
+      wasFound = true;
+    }
+
+    // If Target Value doesn't exist in the Current Node, move to the Next Node
+    if(list.head.next !== null){
+      currentNode = list.head.next;
+    }
+
+    // If Target Value doesn't exist
+    if(list.head.next === null){
+      wasFound = false;
+    }
+
+    // RECUSIVE CASE
+    else{
+      list.contains()
+    }
+
+    return wasFound;
   };
 
   return list;
 };
+
+
+
 
 // Node Function
 var Node = function(value) {
