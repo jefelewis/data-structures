@@ -47,12 +47,12 @@ treeMethods.contains = function(target) {
           wasFound = true;
         }
         // Check the Node has children array
-        if(Array.isArray(node.children[i])){
+        if(Array.isArray(node.children)){
           searchNodes(node.children[i]);
         }
       }
     }
-  }
+  };
 
   // Run the function, starting from the top of the tree
   // REVISIT: WHY "THIS"
