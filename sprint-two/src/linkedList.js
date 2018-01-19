@@ -42,7 +42,8 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-    var currentNode = list.head;
+    var currentNode = list.head.value;
+    var nextNode = list.head.next;
     var wasFound = false;
 
     // BASE CASES
@@ -54,6 +55,7 @@ var LinkedList = function() {
     // If Target Value doesn't exist in the Current Node, move to the Next Node
     if(list.head.next !== null){
       currentNode = list.head.next;
+      // nextNode = ;
     }
 
     // If Target Value doesn't exist
@@ -63,7 +65,7 @@ var LinkedList = function() {
 
     // RECUSIVE CASE
     else{
-      list.contains()
+      list.contains(currentNode);
     }
 
     return wasFound;

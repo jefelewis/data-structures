@@ -1,23 +1,27 @@
 var Tree = function(value) {
-  var newTree = {};
-  newTree.value = value;
-
-  // your code here
-  newTree.children = null;  // fix me
+  var newTree = {
+    value: value,
+    children: []
+  };
 
   return newTree;
 };
 
+
+// Tree Methods
 var treeMethods = {};
 
 treeMethods.addChild = function(value) {
+
 };
 
 treeMethods.contains = function(target) {
+
 };
 
 
 
 /*
- * Complexity: What is the time complexity of the above functions?
- */
+Complexity: What is the time complexity of the above functions?
+
+*/
