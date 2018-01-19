@@ -49,7 +49,7 @@ var LinkedList = function() {
     var wasFound = false;
 
     // Function to Search each Node for the Target
-    searchNodes = function(node){
+    var searchNodes = function(node){
 
         // BASE CASE
         // If Node contains the target
@@ -63,13 +63,14 @@ var LinkedList = function() {
         }
       }
 
+      // Run the function, starting from the Head
       searchNodes(list.head);
       return wasFound;
     }
+
+
     return list;
 };
-
-
 
 
 // Node Function
