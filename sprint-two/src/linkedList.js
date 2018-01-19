@@ -6,6 +6,7 @@ var LinkedList = function() {
   };
 
 
+  // Function to Add to Tail of Linked List
   list.addToTail = function(value) {
     // Check if Linked List has no Nodes (Node becomes Head and Tail)
     if(list.head === null){
@@ -24,6 +25,7 @@ var LinkedList = function() {
     }
   };
 
+  // Function to Remove to Head of Linked List
   list.removeHead = function() {
     // // Check if Linked List has no Nodes
     if(list.head === null){
@@ -41,37 +43,30 @@ var LinkedList = function() {
     }
   };
 
+  // Function to Search for Target in Linked List
   list.contains = function(target) {
-    var currentNode = list.head.value;
-    var nextNode = list.head.next;
+
     var wasFound = false;
 
-    // BASE CASES
-    // If Target Value is found
-    if(list.head.value === target){
-      wasFound = true;
+    // Function to Search each Node for the Target
+    searchNodes = function(node){
+
+        // BASE CASE
+        // If Node contains the target
+        if(node.value === target){
+          wasFound = true;
+        }
+
+        // RECURSIVE CASE
+        if(node.next !== null){
+          searchNodes(node.next);
+        }
+      }
+
+      searchNodes(list.head);
+      return wasFound;
     }
-
-    // If Target Value doesn't exist in the Current Node, move to the Next Node
-    if(list.head.next !== null){
-      currentNode = list.head.next;
-      // nextNode = ;
-    }
-
-    // If Target Value doesn't exist
-    if(list.head.next === null){
-      wasFound = false;
-    }
-
-    // RECUSIVE CASE
-    else{
-      list.contains(currentNode);
-    }
-
-    return wasFound;
-  };
-
-  return list;
+    return list;
 };
 
 
