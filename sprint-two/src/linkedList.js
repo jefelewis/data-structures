@@ -1,3 +1,5 @@
+// Linked List Example: 
+
 // Linked List Function (Contains the Node objects)
 var LinkedList = function() {
   var list = {

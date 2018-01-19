@@ -1,4 +1,4 @@
-var BinarySearchTree = function(input, value) {
+var BinarySearchTree = function(value) {
   var startIndex = 0;
   var middleIndex = Math.floor(input.length/2);
   var endIndex = input.length;
@@ -24,6 +24,6 @@ var BinarySearchTree = function(input, value) {
 
 /*
 Complexity: What is the time complexity of the above functions?
-
+O(log n) Logarithmic
 
 */

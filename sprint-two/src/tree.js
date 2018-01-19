@@ -1,3 +1,5 @@
+// Tree Example: DOM Tree
+
 // Function: Create New Tree
 var Tree = function(value) {
   // var newTree = {};
