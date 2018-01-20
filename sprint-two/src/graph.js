@@ -34,19 +34,33 @@ Graph.prototype.removeNode = function(node) {
   }
 };
 
-// Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
+// Returns a boolean indicating whether two specified nodes are connected. Pass in the values contained in each of the two nodes.
 Graph.prototype.hasEdge = function(fromNode, toNode) {
 
+  // Search through edges object to find the fromNode/toNode combination
+  if(this.edges[fromNode] && this.edges[toNode]){
+    return true;
+  }
+  else{
+    return false;
+  }
 };
 
 // Connects two nodes in a graph by adding an edge between them.
 Graph.prototype.addEdge = function(fromNode, toNode) {
+
+  // 
+
 
 };
 
 // Remove an edge between any two specified (by value) nodes.
 Graph.prototype.removeEdge = function(fromNode, toNode) {
 
+  // Iterate through the object to find the fromNode/toNode combination
+//   if(this.edges[])
+//     //
+//
 };
 
 // Pass in a callback which will be executed on each node of the graph.
