@@ -35,11 +35,16 @@ Graph.prototype.removeNode = function(node) {
     delete this.nodes[node];
   }
 
-  // Search for the Node in the edges to find and delete. Otherwise, a node
+  // Search for the Node in the edges to find and delete. Otherwise, a Node could
+  // not exist, but a different Node could still have an edge with the deleted Node
   // RECURSION
-  // Iterate through the keys, search for this.nodes[node]
-  // If it exists, delete the key
-
+  else{
+    // Iterate through the keys, search for this.nodes[node]
+    for(var keys in this.nodes){
+      // If it exists, run the removeNode Base Case over the keys
+      removeNode(keys);
+    }
+  }
 
 };
 
