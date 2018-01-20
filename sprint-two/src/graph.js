@@ -28,9 +28,9 @@ Graph.prototype.contains = function(node) {
 
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
-  // If the Node within the Nodes object is not undefined, return true
-  if(this.storage[node] !== undefined){
-    delete this.storage[node];
+  // If the Node within the Nodes object is not undefined, delete Node
+  if(this.nodes[node] !== undefined){
+    delete this.nodes[node];
   }
 };
 
