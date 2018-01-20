@@ -17,19 +17,27 @@ Graph.prototype.addNode = function(node) {
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
 Graph.prototype.contains = function(node) {
-  for(var key in this.nodes){
-    if(this[node] === node){
-      return true;
-    }
-    else{
-      return false;
-    }
+  // If the Node within the Nodes object is not undefined, return true
+  if(this.nodes[node] !== undefined){
+    return true;
   }
+  else{
+    return false;
+  }
+
+  // // for(var key in this.nodes){
+  //   if(Number(key) === node){
+  //     return true;
+  //   }
+  //   else{
+  //     return false;
+  //   }
+  // }
 };
 
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
-  
+
 };
 
 // Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
