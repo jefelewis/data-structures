@@ -29,9 +29,18 @@ Graph.prototype.contains = function(node) {
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
   // If the Node within the Nodes object is not undefined, delete Node
+
+  // BASE CASE
   if(this.nodes[node] !== undefined){
     delete this.nodes[node];
   }
+
+  // Search for the Node in the edges to find and delete. Otherwise, a node
+  // RECURSION
+  // Iterate through the keys, search for this.nodes[node]
+  // If it exists, delete the key
+
+
 };
 
 // Returns a boolean indicating whether two specified nodes are connected. Pass in the values contained in each of the two nodes.
