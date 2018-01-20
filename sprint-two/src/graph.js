@@ -6,8 +6,7 @@
 
 // Instantiate a new graph
 var Graph = function() {
-    this.nodes = {};
-    this.edges = {};
+  this.nodes = {};
 };
 
 // Add a node to the graph, passing in the node's value.
@@ -29,27 +28,40 @@ Graph.prototype.contains = function(node) {
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
   // If the Node within the Nodes object is not undefined, delete Node
+  var temp = this.nodes[node];
+  // Node: 1
+  //
 
   // BASE CASE
+  // If the Node exists
+
+
   if(this.nodes[node] !== undefined){
     delete this.nodes[node];
+
+    // Iterate through the keys, search for this.nodes[node]
+    for(var keys in this.nodes){
+      console.log(this.nodes)
+      // If it exists, run the removeNode Base Case over the keys
+      // removeNode(this.nodes[keys]);
+    }
   }
+
+  // // If the Node doesn't exist
+  // if(this.nodes[node] === undefined){
+  //
+  // }
 
   // Search for the Node in the edges to find and delete. Otherwise, a Node could
   // not exist, but a different Node could still have an edge with the deleted Node
   // RECURSION
-  else{
-    // Iterate through the keys, search for this.nodes[node]
-    for(var keys in this.nodes){
-      // If it exists, run the removeNode Base Case over the keys
-      removeNode(keys);
-    }
-  }
+
 
 };
 
 // Returns a boolean indicating whether two specified nodes are connected. Pass in the values contained in each of the two nodes.
 Graph.prototype.hasEdge = function(fromNode, toNode) {
+  // console.log(this.nodes)
 
   // Search through Nodes to see if the fromNode has the toNode AND the toNode has the fromNode
   if(this.nodes[fromNode][toNode] && this.nodes[toNode][fromNode]){
