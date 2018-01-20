@@ -13,7 +13,7 @@ setPrototype.add = function(item) {
 };
 
 setPrototype.contains = function(item) {
-  // If the Node within the Nodes object is not undefined, return true
+  // If the Node within the Storage object is not undefined, return true
   if(this.storage[item] !== undefined){
     return true;
   }
@@ -23,7 +23,7 @@ setPrototype.contains = function(item) {
 };
 
 setPrototype.remove = function(item) {
-  // If the Node within the Nodes object is not undefined, return true
+  // If the Node within the Storage exists, delete the item
   if(this.storage[item] !== undefined){
     delete this.storage[item];
   }
