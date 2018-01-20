@@ -6,19 +6,19 @@
 
 // Instantiate a new graph
 var Graph = function() {
-    this.nodes = [];
-    this.edges = [];
+    this.nodes = {};
+    this.edges = {};
 };
 
 // Add a node to the graph, passing in the node's value.
 Graph.prototype.addNode = function(node) {
-  this.nodes.push(node);
+  this.nodes[node] = {};
 };
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
 Graph.prototype.contains = function(node) {
-  for(var i = 0; i < this.nodes.length; i++){
-    if(this.nodes[i] === node){
+  for(var key in this.nodes){
+    if(this[node] === node){
       return true;
     }
     else{
@@ -29,11 +29,7 @@ Graph.prototype.contains = function(node) {
 
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
-  for(var i = 0; i < this.nodes.length; i++){
-    if(this.nodes[i] === node){
-      delete this.nodes[i];
-    }
-  }
+  
 };
 
 // Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
